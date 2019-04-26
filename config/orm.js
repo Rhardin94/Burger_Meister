@@ -40,7 +40,7 @@ const orm = {
   insertOne: function(tableName, colName, value, cb) {
     let queryString = "INSERT INTO " + tableName;
     queryString += " (" + colName.toString() + ") ";
-    queryString += "VALUES (" + printQuestionMarks(value.length) + ") ";
+    queryString += "VALUES (" + printQuestionMarks(value.length) + ") ;";
     console.log(queryString);
     connection.query(queryString, value, function(err, result) {
       if (err) {
