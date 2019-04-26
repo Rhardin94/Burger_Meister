@@ -1,0 +1,27 @@
+<h1>Burger Meister!</h1>
+<h2>Uneated Burgers!</h2>
+<!--Displays burgers that are not devoured-->
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{>burgers/burger-block devoured=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+<!--Displays burgers already devoured-->
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burgers/burger-block devoured=false}}
+        {{/if}}
+    {{/each}}
+</ul>
+<!--Form to add burger to sql/page-->
+<h2>Add a Burger</h2>
+<form class="create-form">
+    <div class="form-group">
+        <label for="burg">Burger Name:</label>
+        <textarea type="text" id="burg" rows="5" name="burger_name">
+    </div>
+    <button type="submit">Add Burger</button>
+</form>
