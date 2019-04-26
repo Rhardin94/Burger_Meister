@@ -1,0 +1,12 @@
+.uneaten {
+    float: left;
+};
+.eaten {
+    float: right;
+};
+.create-form {
+    clear: both;
+}
+h1 {
+    margin: auto;
+}

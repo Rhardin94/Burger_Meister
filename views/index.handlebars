@@ -1,7 +1,7 @@
 <h1>Burger Meister!</h1>
 <!--Displays burgers that are not devoured-->
-<h2>Uneaten Burgers!</h2>
-<ul>
+<h2 class="uneaten">Uneaten Burgers!</h2>
+<ul class="uneaten">
   {{#each burgers}}
       {{#unless devoured}}
           {{>burgers/burger-block devoured=true}}
@@ -9,8 +9,8 @@
   {{/each}}
 </ul>
 <!--Displays burgers already devoured-->
-<h2>Eaten Burgers</h2>
-<ul>
+<h2 class="eaten">Eaten Burgers</h2>
+<ul class="eaten">
   {{#each burgers}}
       {{#if devoured}}
           {{> burgers/burger-block devoured=false}}
@@ -18,7 +18,7 @@
   {{/each}}
 </ul>
 <!--Form to add burger to sql/page-->
-<h2>Add a Burger</h2>
+<h2 class="create-form">Add a Burger</h2>
 <form class="create-form">
   <div class="form-group">
       <label for="burg">Burger Name:</label>

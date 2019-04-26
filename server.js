@@ -9,7 +9,7 @@ app.use(express.static("public"));
 //Parse app body when needed
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-//Setting handlebars to work with server
+//Setting handlebars template engine to work with server
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 //Importing server routing
