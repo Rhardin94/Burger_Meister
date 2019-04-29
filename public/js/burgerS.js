@@ -21,7 +21,8 @@ $(function () {
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
     let newBurger = {
-      burger_name: $("#burg").val().trim()
+      burger_name: $("#burg").val().trim(),
+      devoured: 0
     };
     //Ajax request to add new burger to database
     $.ajax("/api/burgers", {
