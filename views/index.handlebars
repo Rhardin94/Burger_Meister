@@ -3,7 +3,7 @@
 <h2 class="uneaten">Uneaten Burgers!</h2>
 <ul class="uneaten">
   {{#each burgers}}
-      {{#unless devoured}}
+      {{#unless this.devoured}}
           {{>burgers/burger-block devoured=true}}
       {{/unless}}
   {{/each}}

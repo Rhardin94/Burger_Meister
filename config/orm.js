@@ -39,8 +39,12 @@ const orm = {
   },
   insertOne: function(tableName, colName, value, cb) {
     let queryString = "INSERT INTO " + tableName;
-    queryString += " (" + colName.toString() + ") ";
-    queryString += "VALUES (" + printQuestionMarks(value.length) + ") ;";
+    queryString += " (";
+    queryString += colName.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(value.length);
+    queryString += ") ";
     console.log(queryString);
     connection.query(queryString, value, function(err, result) {
       if (err) {
@@ -49,10 +53,12 @@ const orm = {
       cb(result);
     });
   },
-  updateOne: function(tableName, objColValues, condition, dc) {
+  updateOne: function(tableName, objColValues, condition, cb) {
     let queryString = "UPDATE " + tableName;
-    queryString += " SET " + objToSql(objColValues);
-    queryString += " WHERE " + condition;
+    queryString += " SET ";
+    queryString += objToSql(objColValues);
+    queryString += " WHERE ";
+    queryString += condition;
     console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {

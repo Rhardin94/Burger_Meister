@@ -18,7 +18,7 @@ $(function () {
       location.reload();
     })
   });
-  $("create-form").on("submit", function(event) {
+  $(".create-form").on("submit", function(event) {
     event.preventDefault();
     let newBurger = {
       burger_name: $("#burg").val().trim()
