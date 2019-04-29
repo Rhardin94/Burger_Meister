@@ -5,10 +5,10 @@ $(function () {
     const devouredState = {
       devoured: devoured
     };
-    console.log(id);
-    console.log(devoured);
+    //console.log(id);
+    //console.log(devoured);
     //Ajax request to change burger's devoured state to true
-    $.ajax("/api/burgers" + id, {
+    $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: devouredState
     }).then(function() {
