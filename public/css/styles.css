@@ -1,12 +1,11 @@
+.container {
+    text-align: center;
+}
 .uneaten {
-    float: left;
+    display: inline;
+    /*text-align: left;*/
 };
 .eaten {
-    float: right;
+    display: inline;
+    /*text-align: right;*/
 };
-.create-form {
-    clear: both;
-}
-h1 {
-    margin: auto;
-}
