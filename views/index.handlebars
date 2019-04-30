@@ -1,36 +1,50 @@
 <div class="container">
-  <h1 class="appTitle">Burger Meister!</h1>
-  <!--Displays burgers that are not devoured-->
-  <div class="uneaten">
-    <h2>Uneaten Burgers!</h2>
-    <ul>
-      {{#each burgers}}
-          {{#unless devoured}}
-              {{> burgers/burger-block devoured=true}}
-          {{/unless}}
-      {{/each}}
-    </ul>
+  <div class="row">
+    <div class="col-md-12">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7vQFiyOakSCHjNvmrYfXJB7zQ_zfsK2sjgw7dtKh4IQTsVmV"/ alt="Burger Meister Logo">
+    </div>
   </div>
-  <!--Displays burgers already devoured-->
-  <div class="eaten">
-    <h2>Eaten Burgers</h2>
-    <ul>
-      {{#each burgers}}
-          {{#if devoured}}
-              {{> burgers/burger-block devoured=false}}
-          {{/if}}
-      {{/each}}
-    </ul>
+  <div class="row">
+    <!--Displays burgers that are not devoured-->
+    <div class="col-md-6">
+      <div class="uneaten">
+        <h2>Uneaten Burgers!</h2>
+        <ul>
+          {{#each burgers}}
+              {{#unless devoured}}
+                  {{> burgers/burger-block devoured=true}}
+              {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <!--Displays burgers already devoured-->
+    <div class="col-md-6">
+      <div class="eaten">
+        <h2>Eaten Burgers</h2>
+        <ul>
+          {{#each burgers}}
+              {{#if devoured}}
+                  {{> burgers/burger-block devoured=false}}
+              {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+      </div>
   </div>
   <!--Form to add burger to sql/page-->
-  <div class="burgerForm">
-    <h2>Add a Burger</h2>
-    <form class="create-form">
-      <div class="form-group">
-          <label for="burg">Burger Name:</label>
-          <textarea type="text" id="burg" rows="5" name="burger_name"></textarea>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="burgerForm">
+        <h2>Add a Burger</h2>
+        <form class="create-form">
+          <div class="form-group">
+              <textarea type="text" id="burg" rows="6" name="burger_name"></textarea>
+          </div>
+          <button type="submit">Add Burger</button>
+          <p class="message">Type vhat burger you vant to eat, zen hit "Add Burger"!</p>
+        </form>
       </div>
-      <button type="submit">Add Burger</button>
-    </form>
+    </div>
   </div>
 </div>

@@ -1,11 +1,31 @@
 .container {
     text-align: center;
 }
+body {
+    background-image: url("https://c8.alamy.com/comp/CR1621/berlin-germany-burgermeister-a-popular-imbiss-serving-burgers-from-CR1621.jpg")
+}
 .uneaten {
-    display: inline;
-    /*text-align: left;*/
-};
+    color: white;
+    background-color: rgb(1,53,31);
+    margin: 1%;
+    padding: 1%;
+}
 .eaten {
-    display: inline;
-    /*text-align: right;*/
-};
+    color: white;
+    background-color:rgb(1,53,31);
+    margin: 1%;
+    padding: 1%;
+}
+.burgerForm, .create-form {
+    color: white;
+    background-color: rgb(1,53,31);
+    margin: 1%;
+    padding: 1%;
+}
+textarea {
+    resize: none;
+}
+button {
+    color: white;
+    background-color: rgb(188,120,39)
+}

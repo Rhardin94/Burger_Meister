@@ -20,6 +20,9 @@ $(function () {
   });
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
+    if (("#burg").val() === "") {
+      $(".message").text("You need to write ze burger name!");
+    } else {
     let newBurger = {
       burger_name: $("#burg").val().trim(),
       devoured: 0
@@ -34,5 +37,6 @@ $(function () {
       //Reloads the page to update the changes
       location.reload();
     });
+  }
   });
 });
