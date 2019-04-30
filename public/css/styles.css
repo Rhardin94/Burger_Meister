@@ -9,12 +9,14 @@ body {
     background-color: rgb(1,53,31);
     margin: 1%;
     padding: 1%;
+    border: 2px white solid;
 }
 .eaten {
     color: white;
     background-color:rgb(1,53,31);
     margin: 1%;
     padding: 1%;
+    border: 2px white solid;
 }
 .burgerForm, .create-form {
     color: white;
@@ -22,8 +24,16 @@ body {
     margin: 1%;
     padding: 1%;
 }
+.burgerForm {
+    border: 2px white solid;
+}
+img {
+    border: 2px white solid;
+}
 textarea {
     resize: none;
+    color: white;
+    background-color: rgb(188,120,39)
 }
 button {
     color: white;
