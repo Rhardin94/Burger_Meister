@@ -20,7 +20,7 @@ $(function () {
   });
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
-    if (("#burg").val() === "") {
+    if ($("#burg").val() === "") {
       $(".message").text("You need to write ze burger name!");
     } else {
     let newBurger = {

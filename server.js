@@ -1,12 +1,12 @@
 //Dependencies
 const express = require("express");
-const PORT = process.env.PORT || 4500;
+const PORT = process.env.PORT || 4040;
 const app = express();
 const exphbs = require("express-handlebars");
 const path = require("path");
 //Setting express server
 //Allow static content in public directory to be used with the app
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "public")));
 //Parse app body when needed
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
