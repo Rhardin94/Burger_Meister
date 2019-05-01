@@ -9,7 +9,7 @@
 1. Each Uneaten Burger is accompanied by a button to "Eat ze burger" that moves said burger from the uneaten list to the eaten list.
 ## How it works
 ### First and foremost is the basic functionality as a full-stack application
-1. The app is initialized via `server.js` which imports all of the necessary dependencies [Express](*Express Goto Express), [MySQL](*MySQL Goto MySQL) and [Handlebars](*Handlebars Goto Handlabrs), and starts the server to begin receiving requests.
+1. The app is initialized via `server.js` which imports all of the necessary dependencies [Express](* Express Goto Express), [MySQL](* MySQL Goto MySQL) and [Handlebars](* Handlebars Goto Handlabrs), and starts the server to begin receiving requests.
 1. Next the connection to the MySQL database is established via the `connection.js` file, and prompty exported for use in `server.js`.
 1. `burgers_controller.js` handles all of the routing and response to each request the server receives
 ### Then the customized systems come into play
