@@ -1,6 +1,6 @@
 //Dependencies
 const express = require("express");
-const PORT = process.env.PORT || 4040;
+const PORT = process.env.PORT || 4500;
 const app = express();
 const exphbs = require("express-handlebars");
 const path = require("path");
