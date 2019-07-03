@@ -1,13 +1,36 @@
 # Burger_Meister
- A full-stack app hosted on heroku that utilizes:
-* [Node.js](https://nodejs.org/en/)
-* [Express](https://www.npmjs.com/package/express)
-* [MySQL](https://www.npmjs.com/package/mysql)
-* [Handlebars](https://www.npmjs.com/package/handlebars)
+### Deployed site found here: https://stark-forest-59222.herokuapp.com/
+## Overview
+Burger_Meister is a single page full-stack app, hosted on heroku that allows the user to create and consume the perfect burger! Intially, the user is presented with existing uneaten burgers, populated from the Burger_Meister MySQL database, with the option to 'Eat ze burger' if it sounds delicious! If they wish to create their own, they may do so with the Burger_Meister form below.
 ## How to use
-1. The user is presented a basic html page that provides a list of Uneaten Burgers, and Eaten Burgers, as well as a form for submitting new burgers they desire to eat in the future.
-1. Each Uneaten Burger is accompanied by a button to "Eat ze burger" that moves said burger from the uneaten list to the eaten list.
-## How it works
+Upon first visiting the site, the user is presented with the landing page that shows both eaten and uneaten burgers as well as the add a burger form.
+
+![home page with uneaten burgers div, eaten burgers div, and add burger form](/assets/screenshots/home.jpg)
+
+If the user sees a burger they already want to eat, the may do so from the uneatean burgers section.
+
+![uneanted burgers section](/assets/screenshots/uneaten.jpg)
+
+To eat the burger, the user may click the 'Eat ze burger' button.
+
+![eat ze burger button](/assets/screenshots/eat.jpg)
+
+Once the user has eaten the burger, it will move to the eaten burgers section.
+
+![eaten burgers section](/assets/screenshots/eaten.jpg)
+
+If the use wishes to add a new burger they may do so via the add burger form.
+
+![add burger form](/assets/screenshots/add.jpg)
+
+Once the user has 'constructed' their delicious burger addition, they must hit the 'add burger' button.
+
+![add button](/assets/screenshots/addbtn.jpg)
+
+After the user has added their new creation, it will appear in the uneaten burgers section.
+
+![uneaten burgers section with new burger](/assets/screenshots/new.jpg)
+## Data Flow
 ### First and foremost is the basic functionality as a full-stack application
 1. The app is initialized via `server.js` which imports all of the necessary dependencies and starts the server to begin receiving requests.
 1. Next the connection to the MySQL database is established via the `connection.js` file, and prompty exported for use in `server.js`.
@@ -20,3 +43,8 @@
 ### The last portion of the app, the front-end
 1. We use the handlebars templating engine to generate our html via `main.handlebars`, and dynamically insert data into `index.handlebars` from MySQL to populate each column of burgers based on their devoured state which is determined via our partial `burger-block.handlebars`
 1. The interactive part of the html is then attached via `burgerS.js` to enable each button click to change the devoured state, and/or submit new burgers to the database respectively.
+## Tech
+* [Node.js](https://nodejs.org/en/)
+* [Express](https://www.npmjs.com/package/express)
+* [MySQL](https://www.npmjs.com/package/mysql)
+* [Handlebars](https://www.npmjs.com/package/handlebars)
